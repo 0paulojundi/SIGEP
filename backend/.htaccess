@@ -1,0 +1,9 @@
+# Apache / InfinityFree: encaminha tudo para index.php e bloqueia arquivos sensíveis.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+<FilesMatch "\.(env|log|json|md|sql)$">
+    Require all denied
+</FilesMatch>
