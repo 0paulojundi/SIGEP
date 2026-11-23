@@ -1,0 +1,5 @@
+# Entrada do SIGEP e proteção de arquivos de configuração.
+DirectoryIndex index.php
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,4 @@
+.env
+backend/storage/data/*.json
+backend/storage/logs/*.log
+backend/storage/sessions/sess_*
